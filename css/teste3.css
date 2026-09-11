@@ -1,0 +1,66 @@
+:root {
+    --bg-dark: #0d1117;          
+    --bg-card: #161b22;          
+    --accent-color: #00e5ff;     
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Classe de utilidade para a cor ciano */
+.accent-text {
+    color: var(--accent-color) !important;
+}
+
+/* Estilo da Capa (Header) */
+.cover {
+    background: linear-gradient(180deg, #11151c 0%, var(--bg-dark) 100%);
+    border-bottom: 2px solid var(--accent-color) !important;
+}
+
+.student-info {
+    background-color: var(--bg-card);
+    border-left: 4px solid var(--accent-color);
+}
+
+.student-info strong {
+    color: var(--accent-color);
+}
+
+/* Estilização customizada dos Cards do Bootstrap */
+.custom-card {
+    background-color: var(--bg-card);
+    border: 1px solid #30363d;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.15);
+}
+
+/* -------------------------------------------
+   CORREÇÃO DO CONTÊINER E DA IMAGEM 
+------------------------------------------- */
+.image-container {
+    width: 100%;
+    max-height: 400px; /* Limita a altura máxima para a imagem não engolir a tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta qualquer sobra */
+    background-color: #21262d; 
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #30363d;
+}
+
+.custom-img {
+    max-width: 100%;
+    max-height: 350px; /* Garante que a imagem caiba dentro do limite do contêiner */
+    object-fit: contain; /* Mantém a proporção correta sem esticar ou achatar a placa */
+    border-radius: 4px;
+}
